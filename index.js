@@ -18,7 +18,8 @@ class AbstractSyntaxTree {
         attachComment: options.comments,
         comment: options.comments,
         loc: true,
-        sourceType: 'module'
+        sourceType: 'module',
+        ecmaVersion: 9
       })
     } else {
       this.ast = source
