@@ -19,7 +19,10 @@ class AbstractSyntaxTree {
         comment: options.comments,
         loc: true,
         sourceType: 'module',
-        ecmaVersion: 9
+        ecmaVersion: 9,
+        ecmaFeatures: {
+          jsx: true,
+        }
       })
     } else {
       this.ast = source
