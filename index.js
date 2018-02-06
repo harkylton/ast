@@ -193,7 +193,12 @@ class AbstractSyntaxTree {
   }
 
   static parse (source, options) {
-    return espree.parse(source, options)
+    try {
+      return espree.parse(source, options)
+    } catch (e) {
+      console.log(JSON.stringify(e));
+      throw e;
+    }
   }
 
   static walk (node, callback) {
